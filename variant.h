@@ -114,5 +114,14 @@ public:
     void* rawPtr() const;
 };
 
+
+template<>
+inline VariantPointer::VariantPointer(const char* value)
+{
+    _type = BasicType::String;
+    _rawValue = new std::string(value);
+    _size = sizeof(_rawValue);
+}
+
 }
 #endif // VARIANT_H
