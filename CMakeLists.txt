@@ -5,7 +5,7 @@ project(validation LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(kmisc
+add_executable(validation
     main.cpp
     variant.cpp
     variant.h
