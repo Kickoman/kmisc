@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 file(GLOB_RECURSE PROJECT_SRC ${PROJECT_SOURCE_DIR}/*.cpp)
+file(GLOB_RECURSE PROJECT_HED ${PROJECT_SOURCE_DIR}/*.h)
 
 add_library(kmisc
     main.cpp
@@ -14,4 +15,5 @@ add_library(kmisc
 
 target_include_directories(validation PUBLIC
     ktypes/
-    common/)
+    common/
+    kfunction/)
