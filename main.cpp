@@ -2,6 +2,8 @@
 #include "variant.h"
 #include "validator.h"
 
+#include "kfunction.h"
+
 using namespace std;
 using namespace PolymorphicTypes;
 
@@ -19,5 +21,9 @@ int main()
         cin >> x;
         cout << "Validator output: " << validator.validate() << endl;
     }
+
+    Function<double> f;
+    f = "sin(x)";
+    cout << f(4) << endl;
     return 0;
 }
