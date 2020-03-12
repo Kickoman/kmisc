@@ -5,9 +5,13 @@ project(validation LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+file(GLOB_RECURSE PROJECT_SRC ${PROJECT_SOURCE_DIR}/*.cpp)
+
 add_executable(validation
     main.cpp
-    variant.cpp
-    variant.h
-    validator.cpp
-    validator.h)
+    ${PROJECT_SRC})
+
+
+target_include_directories(validation PUBLIC
+    ktypes/
+    common/)
