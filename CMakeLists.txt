@@ -9,7 +9,9 @@ file(GLOB_RECURSE PROJECT_SRC ${PROJECT_SOURCE_DIR}/*.cpp)
 file(GLOB_RECURSE PROJECT_HED ${PROJECT_SOURCE_DIR}/*.h)
 
 add_library(kmisc
-    ${PROJECT_SRC})
+    ${PROJECT_SRC}
+    ${PROJECT_HED}
+)
 
 
 target_include_directories(kmisc PUBLIC
