@@ -17,4 +17,12 @@
 #define SOFT_ASSERT(a) if(0)
 #endif // DEBUG
 
+#if !defined(WIN32) && !defined(_WIN32) && !defined(__WIN32)
+#define _UNIX
+#define PLATFORM_LINUX
+#else
+#define PLATFORM_WINDOWS
+#endif
+
+
 #endif // COMMONUTILS_H
