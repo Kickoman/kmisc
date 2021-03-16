@@ -1,4 +1,4 @@
 [submodule "kfunction"]
 	path = kfunction
-	url = https://git.karasique.xyz/kanstancin/funCompiler.git
+	url = git@github.com:Kickoman/kfunction.git
 	branch = plain-files
