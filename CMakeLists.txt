@@ -18,3 +18,9 @@ target_include_directories(kmisc PUBLIC
     ktypes/
     common/
     kfunction/)
+
+set_target_properties(
+    kmisc PROPERTIES
+    ENABLE_EXPORTS 1
+    WINDOWS_EXPORT_ALL_SYMBOLS 1
+)
