@@ -60,7 +60,7 @@ int Variant::compare(const Variant& value) const
     {
         if (!isNumeric(value.type()))   // TODO: compare as strings
         {
-            debug("Can't compare numbers to strings. Comparing as strings");
+            kdebug("Can't compare numbers to strings. Comparing as strings");
             return compare_as_strings(value);
         }
 
@@ -68,7 +68,7 @@ int Variant::compare(const Variant& value) const
         double b = value.toDouble();
         return static_cast<int>(a - b);
     } else {
-        SOFT_ASSERT(isNumeric(value.type())) debug("Can't compare numbers to strings. Comparing as strings");
+        SOFT_ASSERT(isNumeric(value.type())) kdebug("Can't compare numbers to strings. Comparing as strings");
         return compare_as_strings(value);
     }
 }

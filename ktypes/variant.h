@@ -90,7 +90,7 @@ public:
     template<typename T>
     T* toCustomPtr() const
     {
-        SOFT_ASSERT(sizeof(T) != _size) debug("Warning! Dangerous cast!\n");
+        SOFT_ASSERT(sizeof(T) != _size) kdebug("Warning! Dangerous cast!\n");
         return reinterpret_cast<T*>(_rawValue);
     }
     int* toIntPtr() const;

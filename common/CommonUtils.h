@@ -12,7 +12,7 @@
 #define SOFT_ASSERT(a) if(a)
 
 #else // DEBUG
-#define debug(...)  (void(0))
+#define kdebug(...)  (void(0))
 #define cerr if(0)cerr
 #define SOFT_ASSERT(a) if(0)
 #endif // DEBUG
